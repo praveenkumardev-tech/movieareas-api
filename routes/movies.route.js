@@ -1,28 +1,24 @@
 import express from 'express';
+import { MovieCreate, MovieIndex, MovieUpdate, MovieDelete } from '../controllers/movies.controller';
 
 const router = express.Router();
 
+
+
+
 //R - for Reading 
-router.get('/', (req, res) => {
-  res.send("Get all movie lists");
-});
+router.get('/', MovieIndex);
 
 
 //C - For creating movies
-router.post('/', (req, res) => {
-  res.send("Create a movie");
-});
+router.post('/', MovieCreate);
 
 
 //U - for updating movies
-router.put('/:id', (req, res) => {
-  res.send("Update a movie");
-});
+router.put('/:id', MovieUpdate);
 
 //D- For Deleting movie
-router.delete('/:id', (req, res) => {
-  res.send("Delete a movie");
-});
+router.delete('/:id', MovieDelete);
 
 export default router;
 
