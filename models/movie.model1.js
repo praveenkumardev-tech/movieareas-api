@@ -10,8 +10,9 @@ const schema = new Schema({
   },
   desc: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
+  
 });
 
 //Create your model
